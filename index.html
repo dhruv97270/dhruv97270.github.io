@@ -55,8 +55,7 @@
       <p class="headline">Aspiring SOC Analyst &middot; Cyber Security Analytics &amp; AI Postgraduate</p>
       <p class="intro">
         I practise the day-to-day work of a Tier 1 SOC analyst: triaging alerts, analysing phishing emails,
-        network traffic and Windows logs, and writing up findings. I've built three open-source triage tools
-        that show how I approach each one.
+        network traffic and Windows logs, and writing up findings. I've built three open-source triage tools that show how I approach each one, plus a Wazuh SIEM home lab on macOS.
       </p>
       <div class="actions">
         <a class="btn btn-primary" href="#projects">View my projects</a>
@@ -69,7 +68,7 @@
       <!-- Quick facts for recruiters skimming in 30 seconds -->
       <ul class="quick-facts" aria-label="Quick facts">
         <li><span>Focus</span>Security operations (SOC Tier 1)</li>
-        <li><span>Projects</span>Phishing, network &amp; Windows log triage tools</li>
+        <li><span>Projects</span>Phishing, network &amp; Windows log triage tools; Wazuh SIEM lab</li>
         <li><span>Certification</span>TryHackMe SOC Level 1</li>
         <li><span>Education</span>PG Certificates: Cyber Security Analytics, AI</li>
       </ul>
@@ -107,7 +106,7 @@
     <!-- ===================================================== -->
     <section class="section container" id="projects" aria-labelledby="projects-title">
       <h2 id="projects-title">Projects</h2>
-      <p class="section-lead">Three SOC triage tools I built, each covering a different kind of evidence an analyst works with: email, network traffic and Windows logs. All are open source on GitHub. Select <strong>View project</strong> for the full write-up.</p>
+      <p class="section-lead">Three SOC triage tools I built, each covering a different kind of evidence an analyst works with (email, network traffic and Windows logs), plus a Wazuh SIEM home lab on macOS. All are open source on GitHub. Select <strong>View project</strong> for the full write-up.</p>
 
       <div class="project-grid">
 
@@ -207,6 +206,38 @@
           </div>
         </article>
 
+<!-- PROJECT 4: Wazuh SIEM Home Lab on macOS -->
+<article class="project">
+<img class="shot" src="assets/projects/wazuh-fim-alerts.png" alt="Wazuh File Integrity Monitoring events showing a file added, modified and deleted on a MacBook" width="1440" height="722">
+<p class="tag-label">Home lab &middot; SIEM / File Integrity Monitoring</p>
+<h3>Wazuh SIEM Home Lab on macOS</h3>
+<p>A Wazuh SIEM running on an Ubuntu VM, monitoring my MacBook as an endpoint, with File Integrity Monitoring alerting on file changes.</p>
+<ul class="tags" aria-label="Technologies and concepts">
+<li>Wazuh</li><li>VirtualBox NAT</li><li>macOS agent</li><li>File Integrity Monitoring</li>
+</ul>
+<div class="card-actions">
+<button class="btn btn-small" aria-expanded="false" aria-controls="p4-details">View project</button>
+<a class="btn btn-small" href="https://github.com/dhruv97270/wazuh-macos-homelab" target="_blank" rel="noopener noreferrer">View GitHub</a>
+</div>
+<div class="details" id="p4-details" hidden>
+<h4>Challenge</h4>
+<p>Build a working SIEM on a single MacBook: the Wazuh server inside a VM and the Mac itself as the monitored endpoint.</p>
+<h4>What I built</h4>
+<ul>
+<li>Wazuh all-in-one (manager, indexer, dashboard) on an Ubuntu VM in VirtualBox.</li>
+<li>VirtualBox NAT port forwarding (TCP 1514/1515) so the macOS agent reaches the manager through <code>127.0.0.1</code>.</li>
+<li>The Wazuh agent installed on macOS and enrolled as active.</li>
+<li>File Integrity Monitoring on a watched folder, with a 60-second scan interval.</li>
+</ul>
+<h4>What I tested</h4>
+<p>Created, modified and deleted a file in the watched folder. Wazuh raised all three alerts: file added (rule 554), integrity checksum changed (550) and file deleted (553).</p>
+<h4>Troubleshooting</h4>
+<p>Fixed an agent enrollment failure (<code>ERROR 1208</code>) by tracing the path with <code>nc -zv</code> and adding the missing port-forwarding rules. Worked around VM clipboard issues by managing the server over SSH from the Mac.</p>
+<h4>What it shows</h4>
+<p>SIEM deployment, agent enrollment, File Integrity Monitoring, virtual networking, log-based troubleshooting.</p>
+</div>
+</article>
+
       </div>
 
       <!-- TRAINING: hands-on platforms (not personal projects) -->
@@ -233,7 +264,7 @@
       <div class="skill-groups">
         <div class="skill-group">
           <h3>SIEM &amp; Log Analysis</h3>
-          <ul class="tags"><li>Splunk (SPL)</li><li>Elastic / Kibana</li><li>KQL</li><li>Log correlation</li><li>Alert tuning</li><li>Dashboards</li></ul>
+          <ul class="tags"><li>Wazuh</li><li>Splunk (SPL)</li><li>Elastic / Kibana</li><li>KQL</li><li>Log correlation</li><li>Alert tuning</li><li>Dashboards</li></ul>
         </div>
         <div class="skill-group">
           <h3>Detection &amp; Response</h3>
