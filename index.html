@@ -69,7 +69,7 @@
       <ul class="quick-facts" aria-label="Quick facts">
         <li><span>Focus</span>Security operations (SOC Tier 1)</li>
         <li><span>Projects</span>Phishing, network &amp; Windows log triage tools; Wazuh SIEM lab</li>
-        <li><span>Certification</span>TryHackMe SOC Level 1</li>
+        <li><span>Certifications</span>TryHackMe SOC Level 1 &middot; Security+ in progress</li>
         <li><span>Education</span>PG Certificates: Cyber Security Analytics, AI</li>
       </ul>
     </section>
@@ -81,20 +81,21 @@
       <h2 id="about-title">About me</h2>
       <div class="about">
         <p>
-          I'm a cybersecurity graduate focused on security operations. I hold postgraduate certificates in
-          Cyber Security Analytics from Mohawk College and Artificial Intelligence from Georgian College,
-          on top of a Bachelor of Computer Science.
+          I'm focused on security operations. I hold a Bachelor of Computer Science and postgraduate credentials in
+          Cyber Security Analytics (Mohawk College) and Artificial Intelligence (Georgian College), and I'm currently
+          studying for CompTIA Security+.
         </p>
         <p>
-          I've built my SOC skills through hands-on practice: the TryHackMe SOC Level 1 path, alert investigations
-          in LetsDefend's simulated SOC, and three triage tools of my own for phishing emails, network traffic and
-          Windows event logs. Each one explains its findings, including the harmless reasons an alert can fire.
-          My AI studies make me especially interested in using anomaly detection to spot unusual patterns in log data.
+          I've practised log monitoring, alert triage, phishing analysis and incident escalation in Splunk, Wazuh and the
+          Elastic Stack through TryHackMe SOC Level 1 and my own Wazuh home lab. I've also built three browser-based triage
+          tools for phishing emails, network traffic and Windows event logs. Each one explains its findings, including the
+          harmless reasons an alert can fire.
         </p>
         <p>
-          Before moving into security I worked as a software developer building Python and SQL backends, and
-          today I handle the day-to-day IT for a retail store as its manager. I'm looking for an entry-level
-          SOC analyst role.
+          Before security I worked as a software developer, preparing datasets for machine learning models in Python and
+          building REST APIs. Today I supervise shifts at a busy retail store, where following procedures, spotting
+          discrepancies and documenting incidents accurately are part of the job. I'm looking for an entry-level SOC analyst
+          role and I'm comfortable with 24/7 shift monitoring.
         </p>
       </div>
     </section>
@@ -136,7 +137,7 @@
               <li>Context-aware scoring: High Risk needs at least one dangerous sign, which keeps normal marketing emails and receipts from being flagged.</li>
             </ul>
             <h4>What I tested</h4>
-            <p>Seven fictional demo emails, from obvious phishing to a fake invoice / BEC and a real-looking marketing email. All five phishing samples scored High Risk and both legitimate samples scored 0. Edge cases included a <code>invoice.pdf.exe</code> attachment in a base64 email and a verified attacker domain asking for a password.</p>
+            <p>Tested against 30 sample phishing emails. The tool also ships with seven fictional demo emails, from obvious phishing to a fake invoice / BEC and a real-looking marketing email. All five phishing samples scored High Risk and both legitimate samples scored 0. Edge cases included a <code>invoice.pdf.exe</code> attachment in a base64 email and a verified attacker domain asking for a password.</p>
             <h4>Security design</h4>
             <p>No backend, tracking or API calls. A strict Content Security Policy blocks every network connection, and pasted content is rendered as text only so nothing in an email can run.</p>
             <h4>What it shows</h4>
@@ -245,7 +246,12 @@
       <div class="training">
         <div class="skill-group">
           <h4>TryHackMe SOC Level 1</h4>
-          <p class="muted">Triaged alerts in Splunk and Elastic, analysed phishing emails and network traffic in Wireshark, and finished the capstone investigations <em>Monday Monitor</em>, <em>Friday Overtime</em> and <em>Retracted</em>, mapping activity to MITRE ATT&amp;CK and the Cyber Kill Chain.</p>
+          <ul class="muted training-list">
+            <li><strong>SOC operations:</strong> triaged alerts, separated true from false positives and escalated incidents in Splunk and the ELK SIEM.</li>
+            <li><strong>Phishing &amp; threat intel:</strong> analysed headers, SPF/DKIM/DMARC, URLs and attachments; enriched IOCs with VirusTotal and AbuseIPDB.</li>
+            <li><strong>Log &amp; network analysis:</strong> investigated Windows, Linux and web logs; detected intrusions with Wireshark, NetworkMiner and Snort.</li>
+            <li><strong>Frameworks:</strong> applied MITRE ATT&amp;CK, the Cyber Kill Chain and the Pyramid of Pain in the capstones; EDR and SOAR fundamentals.</li>
+          </ul>
           <!-- ADD LINK HERE: your TryHackMe certificate or public profile -->
         </div>
         <div class="skill-group">
@@ -263,28 +269,24 @@
       <h2 id="skills-title">Skills</h2>
       <div class="skill-groups">
         <div class="skill-group">
-          <h3>SIEM &amp; Log Analysis</h3>
-          <ul class="tags"><li>Wazuh</li><li>Splunk (SPL)</li><li>Elastic / Kibana</li><li>KQL</li><li>Log correlation</li><li>Alert tuning</li><li>Dashboards</li></ul>
+          <h3>SIEM &amp; Log Monitoring</h3>
+          <ul class="tags"><li>Splunk (SPL)</li><li>Wazuh</li><li>Elastic / Kibana</li><li>KQL</li><li>Log correlation</li><li>Alert tuning</li><li>Dashboards</li></ul>
         </div>
         <div class="skill-group">
           <h3>Detection &amp; Response</h3>
-          <ul class="tags"><li>Alert triage</li><li>Threat detection</li><li>Incident escalation &amp; reporting</li><li>IOC analysis</li></ul>
+          <ul class="tags"><li>Alert triage</li><li>Incident escalation &amp; reporting</li><li>IOC analysis</li><li>MITRE ATT&amp;CK</li><li>Cyber Kill Chain</li></ul>
         </div>
         <div class="skill-group">
-          <h3>Phishing &amp; Threat Intel</h3>
-          <ul class="tags"><li>Email header analysis</li><li>SPF / DKIM / DMARC</li><li>URL &amp; attachment checks</li><li>Basic malware behaviour analysis</li><li>VirusTotal</li><li>AbuseIPDB</li></ul>
+          <h3>Phishing &amp; Malware</h3>
+          <ul class="tags"><li>Email header analysis</li><li>SPF / DKIM / DMARC</li><li>URL &amp; attachment analysis</li><li>Malware behaviour basics</li></ul>
         </div>
         <div class="skill-group">
           <h3>Network &amp; Endpoint</h3>
-          <ul class="tags"><li>Network fundamentals</li><li>Wireshark</li><li>Snort</li><li>IDS/IPS</li><li>Windows Event Logs</li><li>Windows security Event IDs</li><li>Linux logs</li><li>EDR basics</li></ul>
+          <ul class="tags"><li>TCP/IP</li><li>Wireshark</li><li>Snort</li><li>IDS/IPS</li><li>Windows Event Logs</li><li>Sysmon</li><li>Linux logs</li><li>EDR basics</li></ul>
         </div>
         <div class="skill-group">
-          <h3>Frameworks</h3>
-          <ul class="tags"><li>MITRE ATT&amp;CK</li><li>Cyber Kill Chain</li><li>Pyramid of Pain</li></ul>
-        </div>
-        <div class="skill-group">
-          <h3>Programming &amp; Systems</h3>
-          <ul class="tags"><li>Python</li><li>SQL</li><li>Bash basics</li><li>Linux</li><li>REST APIs</li><li>JavaScript</li><li>HTML &amp; CSS</li><li>PowerShell basics</li><li>scikit-learn</li><li>TensorFlow</li></ul>
+          <h3>Tools &amp; Scripting</h3>
+          <ul class="tags"><li>VirusTotal</li><li>AbuseIPDB</li><li>Threat intel feeds</li><li>Ticketing &amp; case notes</li><li>Python</li><li>Bash</li><li>SQL</li></ul>
         </div>
       </div>
     </section>
@@ -297,21 +299,23 @@
       <ol class="timeline">
         <li>
           <div class="tl-head">
-            <h3>Store Manager <span>&middot; BigBear Foodmart, Hamilton, ON</span></h3>
+            <h3>Retail Store Supervisor <span>&middot; BigBear Foodmart, Hamilton, ON</span></h3>
             <p class="date">Sep 2024 – Present</p>
           </div>
           <ul>
-            <li>Handle day-to-day IT for the store: user accounts and access, password resets, device troubleshooting, and escalating issues to vendors.</li>
-            <li>Led the rollout of a new analytics platform from vendor selection to go-live, set up its access controls, trained staff, and logged IT issues with root-cause notes.</li>
+            <li>Supervise daily operations and shift staff in a fast-paced store, handling customer issues calmly and escalating problems to management.</li>
+            <li>Follow strict cash-handling, opening/closing and loss-prevention procedures, spotting discrepancies in POS transactions and inventory and documenting incidents accurately.</li>
           </ul>
         </li>
         <li>
           <div class="tl-head">
-            <h3>Software Developer <span>&middot; Nivaan Infotech, Vishnagar, India</span></h3>
+            <h3>Software Developer <span>&middot; Nivaan Infotech, Visnagar, India</span></h3>
             <p class="date">Jan 2021 – Aug 2022</p>
           </div>
           <ul>
-            <li>Built Python and SQL backends and REST APIs on Linux, applying secure-coding practices such as input validation, parameterized queries and least-privilege access.</li>
+            <li>Collected, cleaned and prepared open-source datasets to train and test machine learning models in Python.</li>
+            <li>Developed and integrated REST APIs, debugging and troubleshooting issues across the application.</li>
+            <li>Collaborated on code reviews, testing and documentation, and supported teammates in resolving technical problems.</li>
           </ul>
         </li>
       </ol>
@@ -325,19 +329,19 @@
         <h2>Education</h2>
         <ul class="edu">
           <li>
-            <h3>Postgraduate Certificate, Artificial Intelligence</h3>
+            <h3>Artificial Intelligence – Architecture, Design, and Implementation</h3>
             <p>Georgian College, Barrie, ON &middot; 2023 – 2024</p>
-            <p class="muted">Machine learning, neural networks, model deployment, Python (scikit-learn, TensorFlow)</p>
+            <p class="muted">Python Programming for Data Science, Machine Learning Frameworks, Neural Networks Optimization and Deployment, AI Infrastructure and Architecture, AI Capstone Project</p>
           </li>
           <li>
-            <h3>Postgraduate Certificate, Cyber Security Analytics</h3>
+            <h3>Cyber Security Analytics</h3>
             <p>Mohawk College, Hamilton, ON &middot; 2022 – 2023</p>
-            <p class="muted">Threat intelligence, network forensics, vulnerability assessment, IDS/IPS, security policy, risk management</p>
+            <p class="muted">Security Operations, Cyber Security Assessment and Testing, Communication and Network Security, Identity and Access Management, Risk Management and Response, Evolving Threats, Auditing and Security Review</p>
           </li>
           <li>
             <h3>Bachelor of Computer Science</h3>
-            <p>Sankalchand Patel University, India &middot; 2017 – 2021</p>
-            <p class="muted">Data structures, operating systems, network protocols, databases</p>
+            <p>Sankalchand Patel University, Visnagar, India &middot; 2017 – 2021</p>
+            <p class="muted">Computer Networks, Operating Systems, Database Management Systems, Data Structures, Web Programming</p>
           </li>
         </ul>
       </div>

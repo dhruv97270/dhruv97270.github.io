@@ -151,3 +151,5 @@ a:hover { text-decoration-thickness: 2px; }
 .training h4 { font-size: 1rem; margin-bottom: .4rem; }
 .training p { margin: 0; font-size: .95rem; }
 code { font-family: var(--mono); font-size: .88em; background: #1b2530; padding: .05rem .3rem; border-radius: 4px; }
+.training-list { padding-left: 1.1rem; margin: 0; font-size: .95rem; }
+.training-list li { margin-bottom: .35rem; }
